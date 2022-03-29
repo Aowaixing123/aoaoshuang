@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:gravity="center"
+	android:orientation="vertical"
+	android:id="@+id/menu"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:layout_width="320dp"
+		android:layout_height="355dp"
+		android:layout_margin="16dp"
+		android:background="@drawable/bg"
+		android:orientation="vertical"
+		android:padding="16dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<Button
+						android:id="@+id/缩小"
+						android:layout_width="40dp"
+						android:layout_height="40dp"
+						android:layout_marginLeft="-2dp"
+						android:background="@drawable/image_1"
+						android:textColor="#FF00AFFF" />
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="35dp"
+						android:gravity="center"
+						android:text="               "
+						android:textAppearance="?android:attr/textAppearanceLarge"
+						android:textColor="#FFFF007C" />
+
+					<Button
+						android:id="@+id/关闭"
+						android:layout_width="40dp"
+						android:layout_height="40dp"
+						android:layout_marginLeft="90dp"
+						android:background="@drawable/image_2"
+						android:textColor="#FF00AFFF" />
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:orientation="horizontal">
+
+					<com.tencent.pipishuang.MyTextView
+						android:id="@+id/dianj"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:gravity="bottom"
+						android:text="皮皮爽"
+						android:textColor="#FF4ECCA3" />
+
+				</LinearLayout>
+
+				<View
+					android:layout_width="match_parent"
+					android:layout_height="2dp"
+					android:layout_marginTop="2dp"
+					android:background="#FF4ECCA3" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="1.0"
+				android:gravity="end"
+				android:orientation="horizontal"
+				android:visibility="gone">
+
+				<ImageView
+					android:layout_width="40dp"
+					android:layout_height="wrap_content"
+					android:background="#00000000" />
+
+				<ImageView
+					android:layout_width="117dp"
+					android:layout_height="13dp"
+					android:background="#00000000" />
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<ScrollView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:fadeScrollbars="false"
+			android:scrollbars="vertical">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+				<FrameLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:orientation="horizontal">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical"
+						android:text="开启绘画："
+						android:textColor="#FF4ECCA3" />
+
+					<Switch
+						android:id="@+id/初始化"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center|end"
+						android:background="@drawable/bg4" />
+
+				</FrameLayout>
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="bottom|center"
+					android:layout_weight="1.0"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="bottom|center"
+						android:text="绘制区"
+						android:textColor="#FF00FFFF" />
+
+					<View
+						android:layout_width="wrap_content"
+						android:layout_height="1dp"
+						android:layout_marginTop="2dp"
+						android:background="#FFF03904" />
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+
+							android:id="@+id/fk1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+
+							android:buttonTint="@android:color/white"
+							android:text="显示方框" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/sx1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="显示射线"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/jl1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="显示距离"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/hp1"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="显示血量"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/血量"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="绘制骨骼"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/红点"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="头部红点"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="bottom|center"
+					android:layout_weight="1.0"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="bottom|center"
+						android:text="内存区"
+						android:textColor="#FF00FFFF" />
+
+					<View
+						android:layout_width="wrap_content"
+						android:layout_height="1dp"
+						android:layout_marginTop="2dp"
+						android:background="#FFFFD700" />
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/weizhi"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="等待添加1"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/weizhi2"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="等待添加2"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/weizhi3"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="等待添加3"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/weizhi4"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="等待添加4"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/weizhi5"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="等待添加5"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/weizhi6"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="等待添加6"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/weizhi7"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="等待添加7"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:gravity="center"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/weizhi8"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_weight="1.0"
+							android:buttonTint="@android:color/white"
+							android:text="等待添加8"
+							android:textColor="@android:color/white" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+					<View
+						android:layout_width="wrap_content"
+						android:layout_height="1dp"
+						android:layout_marginTop="2dp"
+						android:background="#FFEC1313" />
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center_vertical"
+						android:layout_weight="1.0"
+						android:orientation="vertical">
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+<!--					<LinearLayout-->
+<!--						android:layout_width="wrap_content"-->
+<!--						android:layout_height="wrap_content"-->
+<!--						android:layout_gravity="bottom|center"-->
+<!--						android:layout_weight="1.0"-->
+<!--						android:orientation="vertical">-->
+
+<!--						<TextView-->
+<!--							android:layout_width="wrap_content"-->
+<!--							android:layout_height="wrap_content"-->
+<!--							android:layout_gravity="bottom|center"-->
+<!--							android:text="自瞄区"-->
+<!--							android:textColor="#FF00FFFF" />-->
+
+<!--					</LinearLayout>-->
+
+				</LinearLayout>
+
+<!--				<LinearLayout-->
+<!--					android:layout_width="match_parent"-->
+<!--					android:layout_height="wrap_content"-->
+<!--					android:baselineAligned="false"-->
+<!--					android:orientation="horizontal">-->
+
+<!--					<LinearLayout-->
+<!--						android:layout_width="wrap_content"-->
+<!--						android:layout_height="wrap_content"-->
+<!--						android:layout_weight="1.0"-->
+<!--						android:gravity="center"-->
+<!--						android:orientation="vertical">-->
+
+<!--						<CheckBox-->
+<!--							android:id="@+id/weizhi9"-->
+<!--							android:layout_width="wrap_content"-->
+<!--							android:layout_height="wrap_content"-->
+<!--							android:layout_weight="1.0"-->
+<!--							android:buttonTint="@android:color/white"-->
+<!--							android:text="开火自瞄"-->
+<!--							android:textColor="@android:color/white" />-->
+
+<!--					</LinearLayout>-->
+
+<!--					<LinearLayout-->
+<!--						android:layout_width="wrap_content"-->
+<!--						android:layout_height="wrap_content"-->
+<!--						android:layout_weight="1.0"-->
+<!--						android:gravity="center"-->
+<!--						android:orientation="vertical">-->
+
+<!--						<CheckBox-->
+<!--							android:id="@+id/weizhi10"-->
+<!--							android:layout_width="wrap_content"-->
+<!--							android:layout_height="wrap_content"-->
+<!--							android:layout_weight="1.0"-->
+<!--							android:buttonTint="@android:color/white"-->
+<!--							android:text="开镜自瞄"-->
+<!--							android:textColor="@android:color/white" />-->
+
+<!--					</LinearLayout>-->
+
+<!--				</LinearLayout>-->
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:baselineAligned="false"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="bottom|center"
+						android:layout_weight="1.0"
+						android:orientation="vertical">
+
+						<View
+							android:layout_width="wrap_content"
+							android:layout_height="1dp"
+							android:layout_marginTop="2dp"
+							android:background="#FFFFD700" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</ScrollView>
+
+	</LinearLayout>
+
+</LinearLayout>
+
